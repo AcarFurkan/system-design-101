@@ -18,27 +18,27 @@
 
 Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık. 
 
-Tasarımı Mülakatına hazırlanıyor olun, ister sadece sistemlerin nasıl çalıştığını anlamak isteyin, umarız bu depo size bunu başarmada yardımcı olur.
+İster tasarım mülakatına hazırlanıyor olun, ister sadece sistemlerin nasıl çalıştığını anlamak isteyin, umarız bu depo size bunu başarmada yardımcı olur.
 
 # Table of Contents
 
 <!-- TOC toc.levels=2 -->
 
-- [Communication protocols](#communication-protocols)
+- [İletişim protokolleri](#communication-protocols)
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
-  - [How does gRPC work?](#how-does-grpc-work)
-  - [What is a webhook?](#what-is-a-webhook)
-  - [How to improve API performance?](#how-to-improve-api-performance)
+  - [gRPC nasıl çalışıyor?](#how-does-grpc-work)
+  - [Webhook nedir?](#what-is-a-webhook)
+  - [API performansı nasıl artırılır?](#how-to-improve-api-performance)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
-  - [Code First vs. API First](#code-first-vs-api-first)
-  - [HTTP status codes](#http-status-codes)
-  - [What does API gateway do?](#what-does-api-gateway-do)
-  - [How do we design effective and safe APIs?](#how-do-we-design-effective-and-safe-apis)
+  - [Önce Kod vs. Önce API](#code-first-vs-api-first)
+  - [HTTP durum kodları](#http-status-codes)
+  - [API ağ geçidi ne işe yarar?](#what-does-api-gateway-do)
+  - [Etkili ve güvenli API'leri nasıl tasarlarız?](#how-do-we-design-effective-and-safe-apis)
   - [TCP/IP encapsulation](#tcpip-encapsulation)
-  - [Why is Nginx called a “reverse” proxy?](#why-is-nginx-called-a-reverse-proxy)
-  - [What are the common load-balancing algorithms?](#what-are-the-common-load-balancing-algorithms)
-  - [URL, URI, URN - Do you know the differences?](#url-uri-urn---do-you-know-the-differences)
+  - [Nginx'e neden "ters" proxy deniyor?](#why-is-nginx-called-a-reverse-proxy)
+  - [Yaygın yük dengeleme algoritmaları nelerdir?](#what-are-the-common-load-balancing-algorithms)
+  - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---do-you-know-the-differences)
 - [CI/CD](#cicd)
   - [CI/CD Pipeline Explained in Simple Terms](#cicd-pipeline-explained-in-simple-terms)
   - [Netflix Tech Stack (CI/CD Pipeline)](#netflix-tech-stack-cicd-pipeline)
