@@ -18,7 +18,7 @@
 
 Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık. 
 
-İster tasarım mülakatına hazırlanıyor olun, ister sadece sistemlerin nasıl çalıştığını anlamak isteyin, umarız bu depo size bunu başarmada yardımcı olur.
+İster tasarım mülakatına hazırlanıyor olun, ister sadece sistemlerin nasıl çalıştığını anlamak isteyin, umarız bu repo size bunu başarmada yardımcı olur.
 
 # Table of Contents
 
