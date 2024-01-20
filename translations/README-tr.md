@@ -1,5 +1,5 @@
 <p>
-  <a href="https://blog.bytebytego.com/?utm_source=site"><img src="../images/banner.jpg" /> </a>
+  <a href="https://blog.bytebytego.com/?utm_source=site"><img src="../../images/banner.jpg" /> </a>
 </p>
 
 <p align="center">
@@ -112,7 +112,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 Architecture styles define how different components of an application programming interface (API) interact with one another. As a result, they ensure efficiency, reliability, and ease of integration with other systems by providing a standard approach to designing and building APIs. Here are the most used styles:
 
 <p>
-  <img src="images/api-architecture-styles.png" style="width: 640px">
+  <img src="../images/api-architecture-styles.png" style="width: 640px">
 </p>
 
 - SOAP: 
@@ -159,7 +159,7 @@ When it comes to API design, REST and GraphQL each have their own strengths and 
 The diagram below shows a quick comparison between REST and GraphQL.
 
 <p>
-  <img src="images/graphQL.jpg">
+  <img src="../images/graphQL.jpg">
 </p>
 
 REST
@@ -190,7 +190,7 @@ RPC (Remote Procedure Call) is called “**remote**” because it enables commun
 The diagram below illustrates the overall data flow for **gRPC**.
 
 <p>
-  <img src="images/grpc.jpg">
+  <img src="../images/grpc.jpg">
 </p>
 
 Step 1: A REST call is made from the client. The request body is usually in JSON format.
@@ -210,7 +210,7 @@ Steps 12 - 14: The order service receives the packets, decodes them, and sends t
 The diagram below shows a comparison between polling and Webhook. 
 
 <p>
-  <img src="images/webhook.jpeg" style="width: 680px" />
+  <img src="../images/webhook.jpeg" style="width: 680px" />
 </p>
 
 Assume we run an eCommerce website. The clients send orders to the order service via the API gateway, which goes to the payment service for payment transactions. The payment service then talks to an external payment service provider (PSP) to complete the transactions. 
@@ -244,7 +244,7 @@ Webhooks are often referred to as reverse APIs or push APIs because the server s
 The diagram below shows 5 common tricks to improve API performance.
 
 <p>
-  <img src="images/api-performance.jpg">
+  <img src="../images/api-performance.jpg">
 </p>
 
 Pagination
@@ -274,7 +274,7 @@ What problem does each generation of HTTP solve?
 The diagram below illustrates the key features.
 
 <p>
-  <img src="images/http3.jpg" />
+  <img src="../images/http3.jpg" />
 </p>
 
 - HTTP 1.0 was finalized and fully documented in 1996. Every request to the same server requires a separate TCP connection.
@@ -300,7 +300,7 @@ Over time, different API architectural styles are released. Each of them has its
 You can check out the use cases of each style in the diagram.
 
 <p>
-  <img src="images/SOAP vs REST vs GraphQL vs RPC.jpeg" />
+  <img src="../images/SOAP vs REST vs GraphQL vs RPC.jpeg" />
 </p>
 
 
@@ -309,7 +309,7 @@ You can check out the use cases of each style in the diagram.
 The diagram below shows the differences between code-first development and API-first development. Why do we want to consider API first design?
 
 <p>
-  <img src="images/api_first.jpg" style="width: 680px" />
+  <img src="../images/api_first.jpg" style="width: 680px" />
 </p>
 
 
@@ -332,7 +332,7 @@ Because we have designed the API first, the tests can be designed while the code
 ### HTTP status codes
 
 <p>
-  <img src="images/http-status-code.jpg" style="width: 540px" />
+  <img src="../images/http-status-code.jpg" style="width: 540px" />
 </p>
 
 
@@ -349,7 +349,7 @@ Server Error (500-599)
 The diagram below shows the details. 
 
 <p>
-  <img src="images/api_gateway.jpg" style="width: 520px" />
+  <img src="../images/api_gateway.jpg" style="width: 520px" />
 </p>
 
 Step 1 - The client sends an HTTP request to the API gateway. 
@@ -373,7 +373,7 @@ Steps 9-12: The API gateway can handle errors properly, and deals with faults if
 The diagram below shows typical API designs with a shopping cart example. 
 
 <p>
-  <img src="images/safe-apis.jpg" />
+  <img src="../images/safe-apis.jpg" />
 </p>
 
 
@@ -386,7 +386,7 @@ How is data sent over the network? Why do we need so many layers in the OSI mode
 The diagram below shows how data is encapsulated and de-encapsulated when transmitting over the network.
 
 <p>
-  <img src="images/osi model.jpeg" />
+  <img src="../images/osi model.jpeg" />
 </p>
 
 Step 1: When Device A sends data to Device B over the network via the HTTP protocol, it is first added an HTTP header at the application layer.
@@ -408,7 +408,7 @@ We need layers in the network model because each layer focuses on its own respon
 The diagram below shows the differences between a 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐩𝐫𝐨𝐱𝐲 and a 𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐩𝐫𝐨𝐱𝐲.
 
 <p>
-  <img src="images/Forward Proxy v.s. Reverse Proxy2x.jpg" style="width: 720px" />
+  <img src="../images/Forward Proxy v.s. Reverse Proxy2x.jpg" style="width: 720px" />
 </p>
 
 A forward proxy is a server that sits between user devices and the internet.
@@ -433,7 +433,7 @@ A reverse proxy is good for:
 The diagram below shows 6 common algorithms. 
 
 <p>
-  <img src="images/lb-algorithms.jpg" />
+  <img src="../images/lb-algorithms.jpg" />
 </p>
 
 - Static Algorithms 
@@ -469,7 +469,7 @@ The diagram below shows 6 common algorithms.
 The diagram below shows a comparison of URL, URI, and URN. 
 
 <p>
-  <img src="images/url-uri-urn.jpg" />
+  <img src="../images/url-uri-urn.jpg" />
 </p>
 
 - URI 
@@ -494,7 +494,7 @@ If you would like to learn more detail on the subject, I would recommend [W3C’
 ### CI/CD Pipeline Explained in Simple Terms
 
 <p>
-  <img src="images/ci-cd-pipeline.jpg" style="width: 680px" />
+  <img src="../images/ci-cd-pipeline.jpg" style="width: 680px" />
 </p>
 
 Section 1 - SDLC with CI/CD
@@ -523,7 +523,7 @@ A typical CI/CD pipeline has several connected stages:
 ### Netflix Tech Stack (CI/CD Pipeline)
 
 <p>
-  <img src="images/netflix-ci-cd.jpg" style="width: 720px" />
+  <img src="../images/netflix-ci-cd.jpg" style="width: 720px" />
 </p>
 
 Planning: Netflix Engineering uses JIRA for planning and Confluence for documentation. 
@@ -548,7 +548,7 @@ Incident report: Incidents are dispatched according to priority, and PagerDuty i
 These architecture patterns are among the most commonly used in app development, whether on iOS or Android platforms. Developers have introduced them to overcome the limitations of earlier patterns. So, how do they differ? 
 
 <p>
-  <img src="images/client arch patterns.png" style="width: 720px" />
+  <img src="../images/client arch patterns.png" style="width: 720px" />
 </p>
 
 - MVC, the oldest pattern, dates back almost 50 years 
@@ -561,7 +561,7 @@ These architecture patterns are among the most commonly used in app development,
 Patterns are reusable solutions to common design problems, resulting in a smoother, more efficient development process. They serve as blueprints for building better software structures. These are some of the most popular patterns: 
 
 <p>
-  <img src="images/18-oo-patterns.png" />
+  <img src="../images/18-oo-patterns.png" />
 </p>
 
 - Abstract Factory: Family Creator - Makes groups of related items. 
@@ -588,7 +588,7 @@ Patterns are reusable solutions to common design problems, resulting in a smooth
 ### A nice cheat sheet of different databases in cloud services
 
 <p>
-  <img src="images/cloud-dbs2.png" />
+  <img src="../images/cloud-dbs2.png" />
 </p>
 
 Choosing the right database for your project is a complex task. Many database options, each suited to distinct use cases, can quickly lead to decision fatigue. 
@@ -602,7 +602,7 @@ Note: Google has limited documentation for their database use cases. Even though
 The answer will vary depending on your use case. Data can be indexed in memory or on disk. Similarly, data formats vary, such as numbers, strings, geographic coordinates, etc. The system might be write-heavy or read-heavy. All of these factors affect your choice of database index format. 
 
 <p>
-  <img src="images/8-ds-db.jpg" />
+  <img src="../images/8-ds-db.jpg" />
 </p>
 
 The following are some of the most popular data structures used for indexing data: 
@@ -621,7 +621,7 @@ The following are some of the most popular data structures used for indexing dat
 The diagram below shows the process. Note that the architectures for different databases are different, the diagram demonstrates some common designs.
 
 <p>
-  <img src="images/sql execution order in db.jpeg" style="width: 580px" />
+  <img src="../images/sql execution order in db.jpeg" style="width: 580px" />
 </p>
 
 
@@ -646,7 +646,7 @@ Step 8 - During a transaction, the data is in lock mode. This is guaranteed by t
 The CAP theorem is one of the most famous terms in computer science, but I bet different developers have different understandings. Let’s examine what it is and why it can be confusing. 
 
 <p>
-  <img src="images/cap theorem.jpeg" />
+  <img src="../images/cap theorem.jpeg" />
 </p>
 
 CAP theorem states that a distributed system can't provide more than two of these three guarantees simultaneously.
@@ -672,14 +672,14 @@ I think it is still useful as it opens our minds to a set of tradeoff discussion
 ### Types of Memory and Storage
 
 <p>
-  <img src="images/Types_of_Memory_and_Storage.jpeg" style="width: 420px" />
+  <img src="../images/Types_of_Memory_and_Storage.jpeg" style="width: 420px" />
 </p>
 
 
 ### Visualizing a SQL query
 
 <p>
-  <img src="images/sql-execution-order.jpg" style="width: 580px" />
+  <img src="../images/sql-execution-order.jpg" style="width: 580px" />
 </p>
 
 SQL statements are executed by the database system in several steps, including: 
@@ -701,7 +701,7 @@ The execution of SQL is highly complex and involves many considerations, such as
 In 1986, SQL (Structured Query Language) became a standard. Over the next 40 years, it became the dominant language for relational database management systems. Reading the latest standard (ANSI SQL 2016) can be time-consuming. How can I learn it? 
 
 <p>
-  <img src="images/how-to-learn-sql.jpg" />
+  <img src="../images/how-to-learn-sql.jpg" />
 </p>
 
 There are 5 components of the SQL language: 
@@ -721,7 +721,7 @@ For a backend engineer, you may need to know most of it. As a data analyst, you 
 This diagram illustrates where we cache data in a typical architecture.
 
 <p>
-  <img src="images/where do we cache data.jpeg" style="width: 720px" />
+  <img src="../images/where do we cache data.jpeg" style="width: 720px" />
 </p>
 
 
@@ -746,7 +746,7 @@ There are **multiple layers** along the flow.
 There are 3 main reasons as shown in the diagram below.
 
 <p>
-  <img src="images/why_redis_fast.jpeg" />
+  <img src="../images/why_redis_fast.jpeg" />
 </p>
 
 
@@ -761,7 +761,7 @@ You might have noticed the style of this diagram is different from my previous p
 ### How can Redis be used?
 
 <p>
-  <img src="images/top-redis-use-cases.jpg" style="width: 520px" />
+  <img src="../images/top-redis-use-cases.jpg" style="width: 520px" />
 </p>
 
 
@@ -815,7 +815,7 @@ Designing large-scale systems usually requires careful consideration of caching.
 Below are five caching strategies that are frequently utilized. 
 
 <p>
-  <img src="images/top_caching_strategy.jpeg" style="width: 680px" />
+  <img src="../images/top_caching_strategy.jpeg" style="width: 680px" />
 </p>
 
 
@@ -825,7 +825,7 @@ Below are five caching strategies that are frequently utilized.
 ### What does a typical microservice architecture look like? 
 
 <p>
-  <img src="images/typical-microservice-arch.jpg" style="width: 520px" />
+  <img src="../images/typical-microservice-arch.jpg" style="width: 520px" />
 </p>
 
 
@@ -850,7 +850,7 @@ Benefits of microservices:
 A picture is worth a thousand words: 9 best practices for developing microservices.
 
 <p>
-  <img src="images/microservice-best-practices.jpeg" />
+  <img src="../images/microservice-best-practices.jpeg" />
 </p>
 
  
@@ -871,7 +871,7 @@ When we develop microservices, we need to follow the following best practices:
 Below you will find a diagram showing the microservice tech stack, both for the development phase and for production.
 
 <p>
-  <img src="images/microservice-tech.jpeg" />
+  <img src="../images/microservice-tech.jpeg" />
 </p>
 
 
@@ -896,7 +896,7 @@ Cache and Full-text Search - Redis is a common choice for caching key-value pair
 There are many design decisions that contributed to Kafka’s performance. In this post, we’ll focus on two. We think these two carried the most weight.
 
 <p>
-  <img src="images/why_is_kafka_fast.jpeg" />
+  <img src="../images/why_is_kafka_fast.jpeg" />
 </p>
 
 1. The first one is Kafka’s reliance on Sequential I/O.
@@ -931,7 +931,7 @@ Zero copy is a shortcut to save the multiple data copies between application con
 ### How to learn payment systems?
 
 <p>
-  <img src="images/learn-payments.jpg" />
+  <img src="../images/learn-payments.jpg" />
 </p>
 
 ###  Why is the credit card called “the most profitable product in banks”? How does VISA/Mastercard make money? 
@@ -939,7 +939,7 @@ Zero copy is a shortcut to save the multiple data copies between application con
 The diagram below shows the economics of the credit card payment flow.
 
 <p>
-  <img src="images/how does visa makes money.jpg" style="width: 640px" />
+  <img src="../images/how does visa makes money.jpg" style="width: 640px" />
 </p>
 
 1.&nbsp;&nbsp;The cardholder pays a merchant $100 to buy a product.
@@ -963,7 +963,7 @@ Why should the issuing bank be compensated?
 ### How does VISA work when we swipe a credit card at a merchant’s shop?
 
 <p>
-  <img src="images/visa_payment.jpeg" />
+  <img src="../images/visa_payment.jpeg" />
 </p>
 
 
@@ -1008,7 +1008,7 @@ UPI = payment markup language + standard for interoperable payments
 
 
 <p>
-  <img src="images/how-does-upi-work.png"  style="width: 600px" />
+  <img src="../images/how-does-upi-work.png"  style="width: 600px" />
 </p>
 
 
@@ -1019,7 +1019,7 @@ UPI = payment markup language + standard for interoperable payments
 The concepts of DevOps, SRE, and Platform Engineering have emerged at different times and have been developed by various individuals and organizations. 
 
 <p>
-  <img src="images/devops-sre-platform.jpg" />
+  <img src="../images/devops-sre-platform.jpg" />
 </p>
 
 DevOps as a concept was introduced in 2009 by Patrick Debois and Andrew Shafer at the Agile conference. They sought to bridge the gap between software development and operations by promoting a collaborative culture and shared responsibility for the entire software development lifecycle. 
@@ -1035,7 +1035,7 @@ It's worth noting that while these concepts emerged at different times. They are
 K8s is a container orchestration system. It is used for container deployment and management. Its design is greatly impacted by Google’s internal system Borg.
 
 <p>
-  <img src="images/k8s.jpeg" style="width: 680px" />
+  <img src="../images/k8s.jpeg" style="width: 680px" />
 </p>
 
 A k8s cluster consists of a set of worker machines, called nodes, that run containerized applications. Every cluster has at least one worker node.
@@ -1077,7 +1077,7 @@ The worker node(s) host the Pods that are the components of the application work
 ### Docker vs. Kubernetes. Which one should we use? 
 
 <p>
-  <img src="images/docker-vs-k8s.jpg" style="width: 680px" />
+  <img src="../images/docker-vs-k8s.jpg" style="width: 680px" />
 </p>
 
 
@@ -1105,7 +1105,7 @@ The diagram below shows the architecture of Docker and how it works when we run 
 and “docker run”. 
 
 <p>
-  <img src="images/docker.jpg" style="width: 680px" />
+  <img src="../images/docker.jpg" style="width: 680px" />
 </p>
 
 There are 3 components in Docker architecture: 
@@ -1137,7 +1137,7 @@ Let’s take the “docker run” command as an example.
 To begin with, it's essential to identify where our code is stored. The common assumption is that there are only two locations - one on a remote server like Github and the other on our local machine. However, this isn't entirely accurate. Git maintains three local storages on our machine, which means that our code can be found in four places: 
 
 <p>
-  <img src="images/git-commands.png" style="width: 600px" />
+  <img src="../images/git-commands.png" style="width: 600px" />
 </p>
 
 
@@ -1153,7 +1153,7 @@ Most Git commands primarily move files between these four locations.
 The diagram below shows the Git workflow. 
 
 <p>
-  <img src="images/git-workflow.jpeg" style="width: 520px" />
+  <img src="../images/git-workflow.jpeg" style="width: 520px" />
 </p>
 
 
@@ -1170,7 +1170,7 @@ If the remote repository crashes, the files can be recovered from the local repo
 What are the differences?
 
 <p>
-  <img src="images/git-merge-git-rebase.jpeg" style="width: 680px" />
+  <img src="../images/git-merge-git-rebase.jpeg" style="width: 680px" />
 </p>
 
 
@@ -1199,7 +1199,7 @@ Never use it on public branches!
 ### A nice cheat sheet of different cloud services (2023 edition)
 
 <p>
-  <img src="images/cloud-compare.jpg" />
+  <img src="../images/cloud-compare.jpg" />
 </p>
 
 
@@ -1208,7 +1208,7 @@ Never use it on public branches!
 Below is a diagram showing the evolution of architecture and processes since the 1980s. 
 
 <p>
-  <img src="images/cloud-native.jpeg" style="width: 640px" />
+  <img src="../images/cloud-native.jpeg" style="width: 640px" />
 </p>
 
 Organizations can build and run scalable applications on public, private, and hybrid clouds using cloud native technologies. 
@@ -1244,14 +1244,14 @@ Nested JSON files are hard to read.
 Additionally, the generated diagrams can be downloaded as images.
 
 <p>
-  <img src="images/json-cracker.jpeg" />
+  <img src="../images/json-cracker.jpeg" />
 </p>
 
 
 ### Automatically turn code into architecture diagrams
 
 <p>
-  <img src="images/diagrams_as_code.jpeg" style="width: 640px" />
+  <img src="../images/diagrams_as_code.jpeg" style="width: 640px" />
 </p>
 
 
@@ -1269,7 +1269,7 @@ What does it do?
 ### Linux file system explained
 
 <p>
-  <img src="images/linux-file-systems.jpg" style="width: 680px" />
+  <img src="../images/linux-file-systems.jpg" style="width: 680px" />
 </p>
 
 The Linux file system used to resemble an unorganized town where individuals constructed their houses wherever they pleased. However, in 1994, the Filesystem Hierarchy Standard (FHS) was introduced to bring order to the Linux file system.
@@ -1284,7 +1284,7 @@ Linux commands are instructions for interacting with the operating system. They 
 This diagram below shows popular Linux commands: 
 
 <p>
-  <img src="images/18 Most-Used Linux Commands You Should Know-01.jpeg" style="width: 680px" />
+  <img src="../images/18 Most-Used Linux Commands You Should Know-01.jpeg" style="width: 680px" />
 </p>
 
 
@@ -1314,7 +1314,7 @@ This diagram below shows popular Linux commands:
 Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP.) HTTPS transmits encrypted data using Transport Layer Security (TLS.) If the data is hijacked online, all the hijacker gets is binary code. 
 
 <p>
-  <img src="images/https.jpg" />
+  <img src="../images/https.jpg" />
 </p>
 
 
@@ -1341,7 +1341,7 @@ Why does HTTPS switch to symmetric encryption during data transmission? There ar
 OAuth 2.0 is a powerful and secure framework that allows different applications to securely interact with each other on behalf of users without sharing sensitive credentials. 
 
 <p>
-  <img src="images/oAuth2.jpg" />
+  <img src="../images/oAuth2.jpg" />
 </p>
 
 The entities involved in OAuth are the User, the Server, and the Identity Provider (IDP). 
@@ -1361,7 +1361,7 @@ Remember, OAuth 2.0 is all about keeping you and your data safe while making you
 ### Top 4 Forms of Authentication Mechanisms 
 
 <p>
-  <img src="images/top4-most-used-auth.jpg" />
+  <img src="../images/top4-most-used-auth.jpg" />
 </p>
 
 1. SSH Keys: 
@@ -1385,7 +1385,7 @@ Remember, OAuth 2.0 is all about keeping you and your data safe while making you
 These terms are all related to user identity management. When you log into a website, you declare who you are (identification). Your identity is verified (authentication), and you are granted the necessary permissions (authorization). Many solutions have been proposed in the past, and the list keeps growing.
 
 <p>
-  <img src="images/session.jpeg" />
+  <img src="../images/session.jpeg" />
 </p>
 
 From simple to complex, here is my understanding of user identity management:
@@ -1405,7 +1405,7 @@ From simple to complex, here is my understanding of user identity management:
 ### How to store passwords safely in the database and how to validate a password? 
 
 <p>
-  <img src="images/salt.jpg" style="width: 720px" />
+  <img src="../images/salt.jpg" style="width: 720px" />
 </p>
 
  
@@ -1438,7 +1438,7 @@ To validate a password, it can go through the following process:
 ### Explaining JSON Web Token (JWT) to a 10 year old Kid
 
 <p>
-  <img src="images/jwt.jpg" />
+  <img src="../images/jwt.jpg" />
 </p>
 
 Imagine you have a special box called a JWT. Inside this box, there are three parts: a header, a payload, and a signature.
@@ -1457,7 +1457,7 @@ Google Authenticator is commonly used for logging into our accounts when 2-facto
 Google Authenticator is a software-based authenticator that implements a two-step verification service. The diagram below provides detail. 
 
 <p>
-  <img src="images/google_authenticate.jpeg" />
+  <img src="../images/google_authenticate.jpeg" />
 </p>
 
 
@@ -1501,7 +1501,7 @@ Is this authentication mechanism safe?
 This post is based on research from many Netflix engineering blogs and open-source projects. If you come across any inaccuracies, please feel free to inform us.
 
 <p>
-  <img src="images/netflix tech stack.png" style="width: 680px" />
+  <img src="../images/netflix tech stack.png" style="width: 680px" />
 </p>
 
 **Mobile and web**: Netflix has adopted Swift and Kotlin to build native mobile apps. For its web application, it uses React.
@@ -1525,7 +1525,7 @@ This post is based on research from many Netflix engineering blogs and open-sour
 Yes, this is the real Twitter architecture. It is posted by Elon Musk and redrawn by us for better readability. 
 
 <p>
-  <img src="images/twitter-arch.jpeg" />
+  <img src="../images/twitter-arch.jpeg" />
 </p>
 
 
@@ -1534,7 +1534,7 @@ Yes, this is the real Twitter architecture. It is posted by Elon Musk and redraw
 Airbnb’s microservice architecture went through 3 main stages. 
 
 <p>
-  <img src="images/airbnb_arch.jpeg" />
+  <img src="../images/airbnb_arch.jpeg" />
 </p>
 
 
@@ -1570,7 +1570,7 @@ This is what Airbnb is working on now. The micro and macroservice hybrid model f
 Which is the best? Why do different companies choose different options? 
 
 <p>
-  <img src="images/monorepo-microrepo.jpg" />
+  <img src="../images/monorepo-microrepo.jpg" />
 </p>
 
 
@@ -1598,7 +1598,7 @@ Over the years, Microrepo has had more supported tools, including Maven and Grad
 If your answer is on-premise servers and monolith (on the bottom of the following image), you would likely fail the interview, but that's how it is built in reality!
 
 <p>
-  <img src="images/stackoverflow.jpg" />
+  <img src="../images/stackoverflow.jpg" />
 </p>
 
 
@@ -1624,7 +1624,7 @@ This is contrary to all our popular beliefs these days.
 The diagram below shows the architecture comparison before and after the migration. 
 
 <p>
-  <img src="images/serverless-to-monolithic.jpeg" />
+  <img src="../images/serverless-to-monolithic.jpeg" />
 </p>
 
 
@@ -1657,7 +1657,7 @@ Ex Amazon VP Sustainability Adrian Cockcroft: “The Prime Video team had follow
 ### How does Disney Hotstar capture 5 Billion Emojis during a tournament?
 
 <p>
-  <img src="images/hotstar_emojis.jpeg" style="width: 720px" />
+  <img src="../images/hotstar_emojis.jpeg" style="width: 720px" />
 </p>
 
 
@@ -1680,7 +1680,7 @@ A similar design is adopted by LinkedIn which streams a million likes/sec.
 The diagram below shows the evolution of message storage at Discord: 
 
 <p>
-  <img src="images/discord-store-messages.jpg" />
+  <img src="../images/discord-store-messages.jpg" />
 </p>
 
 
@@ -1709,7 +1709,7 @@ Live streaming differs from regular streaming because the video content is sent 
 The diagram below explains what happens behind the scenes to make this possible.
 
 <p>
-  <img src="images/live_streaming_updated.jpg" style="width: 640px" />
+  <img src="../images/live_streaming_updated.jpg" style="width: 640px" />
 </p>
 
  
