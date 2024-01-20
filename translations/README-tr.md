@@ -24,7 +24,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 
 <!-- TOC toc.levels=2 -->
 
-- [İletişim protokolleri](#communication-protocols)
+- [İletişim protokolleri](#iletişim-protokolleri)
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
   - [gRPC nasıl çalışıyor?](#how-does-grpc-work)
   - [Webhook nedir?](#what-is-a-kapsüllemewebhook)
