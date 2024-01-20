@@ -117,39 +117,39 @@ Mimari stilleri, bir uygulama programlama arayüzünün (API) farklı bileşenle
 
 - SOAP: 
 
-  Mature, comprehensive, XML-based
+  Olgun, kapsamlı, XML tabanlı
   
-  Best for enterprise applications 
+  Kurumsal uygulamalar için en iyisi
 
 - RESTful: 
 
-  Popular, easy-to-implement, HTTP methods 
+  Popüler, uygulaması kolay, HTTP yöntemleri
 
-  Ideal for web services 
+  Web hizmetleri için idealdir  
 
 - GraphQL: 
 
-  Query language, request specific data 
+  Sorgu dili, belirli verileri isteyin
 
-  Reduces network overhead, faster responses 
+  Ağ yükünü azaltır, daha hızlı yanıt verir 
 
 - gRPC: 
 
-  Modern, high-performance, Protocol Buffers 
+  Modern, yüksek performanslı Protokol Tamponları
 
-  Suitable for microservices architectures 
+  Microservices mimarilerine uygun 
 
 - WebSocket: 
 
-  Real-time, bidirectional, persistent connections 
-
-  Perfect for low-latency data exchange 
+  Gerçek zamanlı, çift yönlü, kalıcı bağlantılarctions 
+  
+  Düşük gecikmeli veri alışverişi için mükemmel
 
 - Webhook: 
 
-  Event-driven, HTTP callbacks, asynchronous 
-
-  Notifies systems when events occur
+  Olay odaklı, HTTP geri aramaları, eşzamansıznous 
+  
+  Olaylar meydana geldiğinde sistemleri bilgilendirir
 
 
 ### REST API vs. GraphQL
