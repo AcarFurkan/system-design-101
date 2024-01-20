@@ -107,9 +107,9 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 
 <!-- /TOC -->
 
-## Communication protocols
+## İletişim protokolleri
 
-Architecture styles define how different components of an application programming interface (API) interact with one another. As a result, they ensure efficiency, reliability, and ease of integration with other systems by providing a standard approach to designing and building APIs. Here are the most used styles:
+Mimari stilleri, bir uygulama programlama arayüzünün (API) farklı bileşenlerinin birbirleriyle nasıl etkileşime girdiğini tanımlar. Sonuç olarak API'lerin tasarlanması ve oluşturulmasına standart bir yaklaşım sağlayarak verimlilik, güvenilirlik ve diğer sistemlerle entegrasyon kolaylığı sağlarlar. İşte en çok kullanılan stiller:
 
 <p>
   <img src="../images/api-architecture-styles.png" style="width: 640px">
