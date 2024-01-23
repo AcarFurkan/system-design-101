@@ -268,27 +268,27 @@ Kaynaklara erişirken sıklıkla veritabanından veri yüklememiz gerekir. Kapan
 
 ### HTTP 1.0 -> HTTP 1.1 -> HTTP 2.0 -> HTTP 3.0 (QUIC)
 
-What problem does each generation of HTTP solve?
+Her nesil HTTP hangi sorunu çözüyor?
 
-The diagram below illustrates the key features.
+Aşağıdaki diyagram temel özellikleri göstermektedir.
 
 <p>
   <img src="../images/http3.jpg" />
 </p>
 
-- HTTP 1.0 was finalized and fully documented in 1996. Every request to the same server requires a separate TCP connection.
+- HTTP 1.0, 1996'da tamamlandı ve tam olarak dökümante edildi. Aynı sunucuya yapılan her istek, ayrı bir TCP bağlantısı gerektirir.
 
-- HTTP 1.1 was published in 1997. A TCP connection can be left open for reuse (persistent connection), but it doesn’t solve the HOL (head-of-line) blocking issue. 
+- HTTP 1.1 1997'de yayınlandı. Bir TCP bağlantısı yeniden kullanım için açık bırakılabilir (kalıcı bağlantı), ancak bu SB (satır başı) engelleme sorununu çözmez.
 
-  HOL blocking - when the number of allowed parallel requests in the browser is used up, subsequent requests need to wait for the former ones to complete.
+  SB engelleme - tarayıcıda izin verilen paralel isteklerin sayısı tükendiğinde, sonraki isteklerin önceki isteklerin tamamlanmasını beklemesi gerekir.
 
-- HTTP 2.0 was published in 2015. It addresses HOL issue through request multiplexing, which eliminates HOL blocking at the application layer, but HOL still exists at the transport (TCP) layer.
+- HTTP 2.0, 2015'te yayımlandı. SB sorununu, uygulama katmanındaki SB engellemesini ortadan kaldıran istek çoğullama yoluyla giderir, ancak SB hâlâ aktarım (TCP) katmanında mevcuttur.
 
-  As you can see in the diagram, HTTP 2.0 introduced the concept of HTTP “streams”: an abstraction that allows multiplexing different HTTP exchanges onto the same TCP connection. Each stream doesn’t need to be sent in order.
+  Diyagramda görebileceğiniz gibi, HTTP 2.0, HTTP "akışları" kavramını tanıttı: farklı HTTP değişimlerinin aynı TCP bağlantısı üzerinde çoğullanmasına olanak tanıyan bir soyutlama. Her akışın sırayla gönderilmesine gerek yoktur.
 
-- HTTP 3.0 first draft was published in 2020. It is the proposed successor to HTTP 2.0. It uses QUIC instead of TCP for the underlying transport protocol, thus removing HOL blocking in the transport layer. 
+- HTTP 3.0'ın ilk taslağı 2020'de yayınlandı. HTTP 2.0'ın önerilen halefidir. Temel aktarım protokolü için TCP yerine QUIC kullanır, böylece aktarım katmanındaki SB engellemesini kaldırır.
 
-QUIC is based on UDP. It introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, so no additional handshakes and slow starts are required to create new ones, but QUIC streams are delivered independently such that in most cases packet loss affecting one stream doesn't affect others.
+QUIC, UDP'ye dayanmaktadır. Akışları taşıma katmanında birinci sınıf vatandaşlar olarak tanıtır. QUIC akışları aynı QUIC bağlantısını paylaşır, dolayısıyla yenilerini oluşturmak için ek anlaşmalar ve yavaş başlatmalar gerekmez, ancak QUIC akışları bağımsız olarak iletilir, böylece çoğu durumda bir akışı etkileyen paket kaybı diğerlerini etkilemez.
 
 ### SOAP vs REST vs GraphQL vs RPC
 
