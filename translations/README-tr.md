@@ -26,8 +26,8 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 
 - [İletişim protokolleri](#İletişim-protokolleri)
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
-  - [gRPC nasıl çalışıyor?](#gRPC-nasıl-çalışıyor?-)
-  - [Webhook nedir?](#what-is-a-kapsüllemewebhook)
+  - [gRPC nasıl çalışıyor?](#gRPC-nasıl-çalışıyor?)
+  - [Webhook nedir?](#webhook-nedir?)
   - [API performansı nasıl artırılır?](#how-to-improve-api-performance)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
@@ -204,7 +204,7 @@ Adım 9 - 11: Sonuç, sunucu uygulamasından döndürülür ve kodlanarak taşı
 
 Adım 12 - 14: Sipariş hizmeti paketleri alır, kodlarını çözer ve sonucu istemci uygulamasına gönderir.
 
-### What is a webhook?
+### Webhook nedir?
 
 The diagram below shows a comparison between polling and Webhook. 
 
