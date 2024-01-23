@@ -27,7 +27,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 - [İletişim protokolleri](#İletişim-protokolleri)
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
   - [gRPC nasıl çalışıyor?](#gRPC-nasıl-çalışıyor)
-  - [Webhook nedir?](#webhook-nedir?)
+  - [Webhook nedir?](#webhook-nedir)
   - [API performansı nasıl artırılır?](#how-to-improve-api-performance)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
@@ -206,37 +206,37 @@ Adım 12 - 14: Sipariş hizmeti paketleri alır, kodlarını çözer ve sonucu i
 
 ### Webhook nedir?
 
-The diagram below shows a comparison between polling and Webhook. 
+Aşağıdaki şemada polling ve Webhook arasındaki karşılaştırma gösterilmektedir.
 
 <p>
   <img src="../images/webhook.jpeg" style="width: 680px" />
 </p>
 
-Assume we run an eCommerce website. The clients send orders to the order service via the API gateway, which goes to the payment service for payment transactions. The payment service then talks to an external payment service provider (PSP) to complete the transactions. 
+Bir e-ticaret sitesi işlettiğimizi varsayalım. Müşteriler, ödeme işlemleri için ödeme servisine giden API ağ geçidi üzerinden sipariş servisine sipariş gönderirler. Ödeme hizmeti daha sonra işlemleri tamamlamak için harici bir ödeme hizmeti sağlayıcısıyla (PSP) görüşür.
 
-There are two ways to handle communications with the external PSP. 
+Harici PSP ile iletişimi yönetmenin iki yolu vardır.
 
-**1. Short polling** 
+**1. Kısa polling** 
 
-After sending the payment request to the PSP, the payment service keeps asking the PSP about the payment status. After several rounds, the PSP finally returns with the status. 
+Ödeme talebini PSP'ye gönderdikten sonra ödeme hizmeti PSP'ye ödeme durumu hakkında soru sormaya devam eder. Birkaç turdan sonra PSP nihayet durumla birlikte geri döner.
 
-Short polling has two drawbacks: 
-* Constant polling of the status requires resources from the payment service. 
-* The External service communicates directly with the payment service, creating security vulnerabilities. 
+Kısa oylamanın iki dezavantajı vardır:
+* Durumun sürekli yoklanması, ödeme hizmetinden kaynak gerektirir.
+* Harici hizmet, ödeme hizmetiyle doğrudan iletişim kurarak güvenlik açıkları oluşturur.
 
 **2. Webhook** 
 
-We can register a webhook with the external service. It means: call me back at a certain URL when you have updates on the request. When the PSP has completed the processing, it will invoke the HTTP request to update the payment status.
+Bir webhook'u harici hizmete kaydedebiliriz. Bu şu anlama gelir: istekle ilgili güncellemeler olduğunda bana belirli bir URL'den bildir. PSP işlemi tamamladığında ödeme durumunu güncellemek için HTTP isteğini başlatacaktır.
 
-In this way, the programming paradigm is changed, and the payment service doesn’t need to waste resources to poll the payment status anymore.
+Bu şekilde programlama paradigması değiştirilir ve ödeme hizmetinin artık ödeme durumunu yoklamak için kaynak israfına gerek kalmaz.
 
-What if the PSP never calls back? We can set up a housekeeping job to check payment status every hour.
+Ya PSP asla geri aramazsa? Ödeme durumunu her saat başı kontrol etmek için bir temizlik işi ayarlayabiliriz.
 
-Webhooks are often referred to as reverse APIs or push APIs because the server sends HTTP requests to the client. We need to pay attention to 3 things when using a webhook:
+Sunucu istemciye HTTP istekleri gönderdiği için web kancalarına genellikle ters API'ler veya push API'ler denir. Webhook kullanırken 3 şeye dikkat etmemiz gerekiyor:
 
-1. We need to design a proper API for the external service to call.
-2. We need to set up proper rules in the API gateway for security reasons.
-3. We need to register the correct URL at the external service.
+1. Harici hizmetin çağrılabilmesi için uygun bir API tasarlamamız gerekiyor.
+2. Güvenlik nedeniyle API ağ geçidinde uygun kuralları ayarlamamız gerekiyor.
+3. Harici hizmete doğru URL'yi kaydetmemiz gerekiyor.
 
 ### How to improve API performance?
 
