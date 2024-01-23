@@ -28,7 +28,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
   - [gRPC nasıl çalışıyor?](#gRPC-nasıl-çalışıyor)
   - [Webhook nedir?](#webhook-nedir)
-  - [API performansı nasıl artırılır?](#how-to-improve-api-performance)
+  - [API performansı nasıl artırılır?](#api-performansı-nasıl-artırılır)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
   - [Önce Kod vs. Önce API](#code-first-vs-api-first)
@@ -238,33 +238,33 @@ Sunucu istemciye HTTP istekleri gönderdiği için web kancalarına genellikle t
 2. Güvenlik nedeniyle API ağ geçidinde uygun kuralları ayarlamamız gerekiyor.
 3. Harici hizmete doğru URL'yi kaydetmemiz gerekiyor.
 
-### How to improve API performance?
+### API performansı nasıl artırılır?
 
-The diagram below shows 5 common tricks to improve API performance.
+Aşağıdaki şemada API performansını artırmaya yönelik 5 yaygın püf noktası gösterilmektedir.
 
 <p>
   <img src="../images/api-performance.jpg">
 </p>
 
-Pagination
+Sayfalandırma
 
-This is a common optimization when the size of the result is large. The results are streaming back to the client to improve the service responsiveness.
+Sonucun boyutu büyük olduğunda bu yaygın bir optimizasyondur. Sonuçlar, hizmetin yanıt verme hızını iyileştirmek için müşteriye geri aktarılıyor.
 
-Asynchronous Logging
+Eşzamansız Günlük Kaydı
 
-Synchronous logging deals with the disk for every call and can slow down the system. Asynchronous logging sends logs to a lock-free buffer first and immediately returns. The logs will be flushed to the disk periodically. This significantly reduces the I/O overhead.
+Senkron kayıt işlemi, her çağrı için diski kullanır ve sistemi yavaşlatabilir. Asenkron kayıt ise, önce günlük kayıtları kilitlenmeyen bir arabelleğe gönderir ve hemen geri döner. Günlükler periyodik olarak diske kaydedilecektir. Bu, G/Ç yükünü önemli ölçüde azaltır.
 
-Caching
+Önbelleğe almak
 
-We can store frequently accessed data into a cache. The client can query the cache first instead of visiting the database directly. If there is a cache miss, the client can query from the database. Caches like Redis store data in memory, so the data access is much faster than the database.
+Sık erişilen verileri önbellekte saklayabiliriz. İstemci doğrudan veritabanını ziyaret etmek yerine önce önbelleği sorgulayabilir. Önbellek kaybı varsa istemci veritabanından sorgulama yapabilir. Redis gibi önbellekler verileri bellekte saklar, dolayısıyla veri erişimi veritabanından çok daha hızlıdır.
 
-Payload Compression
+Yük Sıkıştırma
 
-The requests and responses can be compressed using gzip etc so that the transmitted data size is much smaller. This speeds up the upload and download.
+İstekler ve yanıtlar, iletilen veri boyutunun çok daha küçük olması için gzip vb. kullanılarak sıkıştırılabilir. Bu, yükleme ve indirmeyi hızlandırır.
 
-Connection Pool
+Bağlantı Havuzu
 
-When accessing resources, we often need to load data from the database. Opening the closing db connections adds significant overhead. So we should connect to the db via a pool of open connections. The connection pool is responsible for managing the connection lifecycle.
+Kaynaklara erişirken sıklıkla veritabanından veri yüklememiz gerekir. Kapanan veri tabanı bağlantılarını açmak önemli miktarda ek yük getirir. Bu yüzden veri tabanına açık bağlantılardan oluşan bir havuz aracılığıyla bağlanmalıyız. Bağlantı havuzu, bağlantı yaşam döngüsünü yönetmekten sorumludur.
 
 ### HTTP 1.0 -> HTTP 1.1 -> HTTP 2.0 -> HTTP 3.0 (QUIC)
 
