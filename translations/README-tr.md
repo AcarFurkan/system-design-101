@@ -26,7 +26,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 
 - [İletişim protokolleri](#İletişim-protokolleri)
   - [REST API vs. GraphQL](#rest-api-vs-graphql)
-  - [gRPC nasıl çalışıyor?](#how-does-grpc-work)
+  - [gRPC nasıl çalışıyor?](#gRPC-nasıl-çalışıyor?-)
   - [Webhook nedir?](#what-is-a-kapsüllemewebhook)
   - [API performansı nasıl artırılır?](#how-to-improve-api-performance)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
@@ -182,27 +182,27 @@ REST ve GraphQL arasındaki en iyi seçim, uygulama ve geliştirme ekibinin öze
 Her iki API yaklaşımı da sihirli değnek değildir. Doğru stili seçmek için gereksinimleri ve ödünleşimleri dikkatlice değerlendirmek önemlidir. Hem REST hem de GraphQL, verileri açığa çıkarmak ve modern uygulamaları güçlendirmek için geçerli seçeneklerdir.
 
 
-### How does gRPC work?
+### gRPC nasıl çalışıyor?
 
-RPC (Remote Procedure Call) is called “**remote**” because it enables communications between remote services when services are deployed to different servers under microservice architecture. From the user’s point of view, it acts like a local function call.
+RPC (Uzaktan Yordam Çağrısı), hizmetler mikro hizmet mimarisi altında farklı sunuculara dağıtıldığında uzak hizmetler arasındaki iletişimi sağladığı için “**uzak**” olarak adlandırılır. Kullanıcının bakış açısından yerel bir işlev çağrısı gibi davranır.
 
-The diagram below illustrates the overall data flow for **gRPC**.
+Aşağıdaki diyagram **gRPC** için genel veri akışını göstermektedir.
 
 <p>
   <img src="../images/grpc.jpg">
 </p>
 
-Step 1: A REST call is made from the client. The request body is usually in JSON format.
+Adım 1: İstemciden bir REST çağrısı yapılır. İstek gövdesi genellikle JSON biçimindedir.
 
-Steps 2 - 4: The order service (gRPC client) receives the REST call, transforms it, and makes an RPC call to the payment service. gRPC encodes the **client stub** into a binary format and sends it to the low-level transport layer.
+Adım 2 - 4: Sipariş servisi (gRPC istemcisi) REST çağrısını alır, dönüştürür ve ödeme servisine bir RPC çağrısı yapar. gRPC, **istemci uçbirimini** ikili formata kodlar ve düşük seviye taşıma katmanına gönderir.
 
-Step 5: gRPC sends the packets over the network via HTTP2. Because of binary encoding and network optimizations, gRPC is said to be 5X faster than JSON.
+Adım 5: gRPC, paketleri ağ üzerinden HTTP2 aracılığıyla gönderir. İkili kodlama ve ağ optimizasyonları nedeniyle gRPC'nin JSON'dan 5 kat daha hızlı olduğu söyleniyor.
 
-Steps 6 - 8: The payment service (gRPC server) receives the packets from the network, decodes them, and invokes the server application.
+Adım 6 - 8: Ödeme hizmeti (gRPC sunucusu) ağdan paketleri alır, kodlarını çözer ve sunucu uygulamasını çağırır.
 
-Steps 9 - 11: The result is returned from the server application, and gets encoded and sent to the transport layer.
+Adım 9 - 11: Sonuç, sunucu uygulamasından döndürülür ve kodlanarak taşıma katmanına gönderilir.
 
-Steps 12 - 14: The order service receives the packets, decodes them, and sends the result to the client application.
+Adım 12 - 14: Sipariş hizmeti paketleri alır, kodlarını çözer ve sonucu istemci uygulamasına gönderir.
 
 ### What is a webhook?
 
