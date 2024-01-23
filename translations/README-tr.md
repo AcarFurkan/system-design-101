@@ -218,7 +218,7 @@ Harici ÖHS ile iletişimi yönetmenin iki yolu vardır.
 
 **1. Kısa polling** 
 
-Ödeme talebini PSP'ye gönderdikten sonra ödeme hizmeti PSP'ye ödeme durumu hakkında soru sormaya devam eder. Birkaç turdan sonra PSP nihayet durumla birlikte geri döner.
+Ödeme talebini ÖHS'ye gönderdikten sonra ödeme hizmeti ÖHS'ye ödeme durumu hakkında soru sormaya devam eder. Birkaç turdan sonra ÖHS nihayet durumla birlikte geri döner.
 
 Kısa oylamanın iki dezavantajı vardır:
 * Durumun sürekli yoklanması, ödeme hizmetinden kaynak gerektirir.
@@ -226,11 +226,11 @@ Kısa oylamanın iki dezavantajı vardır:
 
 **2. Webhook** 
 
-Bir webhook'u harici hizmete kaydedebiliriz. Bu şu anlama gelir: istekle ilgili güncellemeler olduğunda bana belirli bir URL'den bildir. PSP işlemi tamamladığında ödeme durumunu güncellemek için HTTP isteğini başlatacaktır.
+Bir webhook'u harici hizmete kaydedebiliriz. Bu şu anlama gelir: istekle ilgili güncellemeler olduğunda bana belirli bir URL'den bildir. ÖHS işlemi tamamladığında ödeme durumunu güncellemek için HTTP isteğini başlatacaktır.
 
 Bu şekilde programlama paradigması değiştirilir ve ödeme hizmetinin artık ödeme durumunu yoklamak için kaynak israfına gerek kalmaz.
 
-Ya PSP asla geri aramazsa? Ödeme durumunu her saat başı kontrol etmek için bir temizlik işi ayarlayabiliriz.
+Ya ÖHS asla geri aramazsa? Ödeme durumunu her saat başı kontrol etmek için bir temizlik işi ayarlayabiliriz.
 
 Sunucu istemciye HTTP istekleri gönderdiği için web kancalarına genellikle ters API'ler veya push API'ler denir. Webhook kullanırken 3 şeye dikkat etmemiz gerekiyor:
 
