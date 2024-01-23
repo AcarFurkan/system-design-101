@@ -212,9 +212,9 @@ Aşağıdaki şemada polling ve Webhook arasındaki karşılaştırma gösterilm
   <img src="../images/webhook.jpeg" style="width: 680px" />
 </p>
 
-Bir e-ticaret sitesi işlettiğimizi varsayalım. Müşteriler, ödeme işlemleri için ödeme servisine giden API ağ geçidi üzerinden sipariş servisine sipariş gönderirler. Ödeme hizmeti daha sonra işlemleri tamamlamak için harici bir ödeme hizmeti sağlayıcısıyla (PSP) görüşür.
+Bir e-ticaret sitesi işlettiğimizi varsayalım. Müşteriler, ödeme işlemleri için ödeme servisine giden API ağ geçidi üzerinden sipariş servisine sipariş gönderirler. Ödeme hizmeti daha sonra işlemleri tamamlamak için harici bir ödeme hizmeti sağlayıcısıyla (ÖHS) görüşür.
 
-Harici PSP ile iletişimi yönetmenin iki yolu vardır.
+Harici ÖHS ile iletişimi yönetmenin iki yolu vardır.
 
 **1. Kısa polling** 
 
