@@ -154,33 +154,32 @@ Mimari stilleri, bir uygulama programlama arayüzünün (API) farklı bileşenle
 
 ### REST API vs. GraphQL
 
-When it comes to API design, REST and GraphQL each have their own strengths and weaknesses.
+API tasarımı söz konusu olduğunda REST ve GraphQL'in her birinin kendi güçlü ve zayıf yönleri vardır.
 
-The diagram below shows a quick comparison between REST and GraphQL.
-
+Aşağıdaki şemada REST ve GraphQL arasında hızlı bir karşılaştırma gösterilmektedir.
 <p>
   <img src="../images/graphQL.jpg">
 </p>
 
 REST
 
-- Uses standard HTTP methods like GET, POST, PUT, DELETE for CRUD operations.
-- Works well when you need simple, uniform interfaces between separate services/applications.
-- Caching strategies are straightforward to implement.
-- The downside is it may require multiple roundtrips to assemble related data from separate endpoints.
+- CRUD işlemleri için GET, POST, PUT, DELETE gibi standart HTTP yöntemlerini kullanır.
+- Ayrı hizmetler/uygulamalar arasında basit, tek tip arayüzlere ihtiyaç duyduğunuzda iyi çalışır.
+- Önbelleğe alma stratejilerinin uygulanması kolaydır.
+- Dezavantajı, ayrı uç noktalardan ilgili verileri toplamak için birden fazla dönüş yapılmasını gerektirebilir.
 
 GraphQL
 
-- Provides a single endpoint for clients to query for precisely the data they need.
-- Clients specify the exact fields required in nested queries, and the server returns optimized payloads containing just those fields.
-- Supports Mutations for modifying data and Subscriptions for real-time notifications.
-- Great for aggregating data from multiple sources and works well with rapidly evolving frontend requirements.
-- However, it shifts complexity to the client side and can allow abusive queries if not properly safeguarded
-- Caching strategies can be more complicated than REST.
+- Müşterilerin tam olarak ihtiyaç duydukları verileri sorgulamaları için tek bir uç nokta sağlar.
+- İstemciler, iç içe geçmiş sorgularda gereken alanları tam olarak belirtir ve sunucu, yalnızca bu alanları içeren optimize edilmiş verileri döndürür.
+- Verileri değiştirmek için Mutasyonları ve gerçek zamanlı bildirimler için Abonelikleri destekler.
+- Birden fazla kaynaktan veri toplamak için idealdir ve hızla gelişen ön uç gereksinimleriyle iyi çalışır.
+- Ancak karmaşıklığı istemci tarafına kaydırır ve uygun şekilde korunmadığı takdirde kötü niyetli sorgulara izin verebilir
+- Önbelleğe alma stratejileri REST'ten daha karmaşık olabilir.
 
-The best choice between REST and GraphQL depends on the specific requirements of the application and development team. GraphQL is a good fit for complex or frequently changing frontend needs, while REST suits applications where simple and consistent contracts are preferred.
+REST ve GraphQL arasındaki en iyi seçim, uygulama ve geliştirme ekibinin özel gereksinimlerine bağlıdır. GraphQL, karmaşık veya sık değişen ön uç ihtiyaçları için iyi bir seçimdir; REST ise basit ve tutarlı sözleşmelerin tercih edildiği uygulamalara uygundur.
 
-Neither API approach is a silver bullet. Carefully evaluating requirements and tradeoffs is important to pick the right style. Both REST and GraphQL are valid options for exposing data and powering modern applications.
+Her iki API yaklaşımı da sihirli değnek değildir. Doğru stili seçmek için gereksinimleri ve ödünleşimleri dikkatlice değerlendirmek önemlidir. Hem REST hem de GraphQL, verileri açığa çıkarmak ve modern uygulamaları güçlendirmek için geçerli seçeneklerdir.
 
 
 ### How does gRPC work?
