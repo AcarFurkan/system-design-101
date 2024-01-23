@@ -141,13 +141,13 @@ Mimari stilleri, bir uygulama programlama arayüzünün (API) farklı bileşenle
 
 - WebSocket: 
 
-  Gerçek zamanlı, çift yönlü, kalıcı bağlantılarctions 
+  Gerçek zamanlı, çift yönlü, kalıcı bağlantılar
   
   Düşük gecikmeli veri alışverişi için mükemmel
 
 - Webhook: 
 
-  Olay odaklı, HTTP geri aramaları, eşzamansıznous 
+  Olay odaklı, HTTP geri aramaları, eşzamansız
   
   Olaylar meydana geldiğinde sistemleri bilgilendirir
 
