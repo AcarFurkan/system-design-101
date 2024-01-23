@@ -292,11 +292,11 @@ QUIC, UDP'ye dayanmaktadır. Akışları taşıma katmanında birinci sınıf va
 
 ### SOAP vs REST vs GraphQL vs RPC
 
-The diagram below illustrates the API timeline and API styles comparison.
+Aşağıdaki şemada API zaman çizelgesi ve API stilleri karşılaştırması gösterilmektedir.
 
-Over time, different API architectural styles are released. Each of them has its own patterns of standardizing data exchange. 
+Zamanla farklı API mimari stilleri yayımlanır. Her birinin veri alışverişini standartlaştırma konusunda kendi kalıpları vardır.
 
-You can check out the use cases of each style in the diagram.
+Diyagramda her stilin kullanım durumlarına göz atabilirsiniz.
 
 <p>
   <img src="../images/SOAP vs REST vs GraphQL vs RPC.jpeg" />
