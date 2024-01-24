@@ -31,7 +31,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [API performansı nasıl artırılır?](#api-performansı-nasıl-artırılır)
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
-  - [Önce Kod vs. Önce API](#code-first-vs-api-first)
+  - [Önce Kod vs. Önce API](#önce-kod-vs-önce-api)
   - [HTTP durum kodları](#http-status-codes)
   - [API ağ geçidi ne işe yarar?](#what-does-api-gateway-do)
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#how-do-we-design-effective-and-safe-apis)
@@ -303,30 +303,30 @@ Diyagramda her stilin kullanım durumlarına göz atabilirsiniz.
 </p>
 
 
-### Code First vs. API First 
+### Önce Kod vs. Önce API
 
-The diagram below shows the differences between code-first development and API-first development. Why do we want to consider API first design?
+Aşağıdaki diyagramda kod öncelikli geliştirme ile API öncelikli geliştirme arasındaki farklar gösterilmektedir. Neden API'nin ilk tasarımını düşünmek istiyoruz?
 
 <p>
   <img src="../images/api_first.jpg" style="width: 680px" />
 </p>
 
 
-- Microservices increase system complexity and we have separate services to serve different functions of the system. While this kind of architecture facilitates decoupling and segregation of duty, we need to handle the various communications among services. 
+- Mikro hizmetler sistem karmaşıklığını artırır ve sistemin farklı işlevlerine hizmet edecek ayrı hizmetlerimiz vardır. Bu tür bir mimari, ayrıştırmayı ve görev ayrımını kolaylaştırırken, hizmetler arasındaki çeşitli iletişimleri de ele almamız gerekiyor.
 
-It is better to think through the system's complexity before writing the code and carefully defining the boundaries of the services.
+Kodu yazmadan ve hizmetlerin sınırlarını dikkatlice tanımlamadan önce sistemin karmaşıklığını düşünmek daha iyidir.
 
-- Separate functional teams need to speak the same language and the dedicated functional teams are only responsible for their own components and services. It is recommended that the organization speak the same language via API design. 
+- Ayrı fonksiyonel ekiplerin aynı dili konuşması gerekir ve özel fonksiyonel ekipler yalnızca kendi bileşenleri ve hizmetlerinden sorumludur. API tasarımı ile kurumun aynı dili konuşması tavsiye edilir.
 
-We can mock requests and responses to validate the API design before writing code.
+Kod yazmadan önce API tasarımını doğrulamak için istekleri ve yanıtları taklit edebiliriz.
 
-- Improve software quality and developer productivity Since we have ironed out most of the uncertainties when the project starts, the overall development process is smoother, and the software quality is greatly improved. 
+- Yazılım kalitesini ve geliştirici verimliliğini artırın Proje başladığında belirsizliklerin çoğunu ortadan kaldırdığımız için, genel geliştirme süreci daha sorunsuz hale geldi ve yazılım kalitesi büyük ölçüde arttı.
 
-Developers are happy about the process as well because they can focus on functional development instead of negotiating sudden changes.
+Geliştiriciler de süreçten memnun çünkü ani değişiklikler üzerinde tartışmak yerine fonksiyonel gelişime odaklanabilirler.
 
-The possibility of having surprises toward the end of the project lifecycle is reduced.
+Proje yaşam döngüsünün sonuna doğru sürprizlerle karşılaşma olasılığı azalır.
 
-Because we have designed the API first, the tests can be designed while the code is being developed. In a way, we also have TDD (Test Driven Design) when using API first development.
+Önce API'yi tasarladığımız için testler kod geliştirilirken tasarlanabilir. Bir bakıma API ilk geliştirmeyi kullanırken TDD'ye (Test Driven Design-Test Odaklı Tasarım) da sahibiz.
 
 ### HTTP status codes
 
