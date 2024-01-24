@@ -32,7 +32,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [HTTP 1.0 -\> HTTP 1.1 -\> HTTP 2.0 -\> HTTP 3.0 (QUIC)](#http-10---http-11---http-20---http-30-quic)
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
   - [Önce Kod vs. Önce API](#önce-kod-vs-önce-api)
-  - [HTTP durum kodları](#http-status-codes)
+  - [HTTP durum kodları](#http-durum-kodları)
   - [API ağ geçidi ne işe yarar?](#what-does-api-gateway-do)
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#how-do-we-design-effective-and-safe-apis)
   - [TCP/IP kapsülleme](#tcpip-encapsulation)
@@ -328,20 +328,20 @@ Proje yaşam döngüsünün sonuna doğru sürprizlerle karşılaşma olasılı�
 
 Önce API'yi tasarladığımız için testler kod geliştirilirken tasarlanabilir. Bir bakıma API ilk geliştirmeyi kullanırken TDD'ye (Test Driven Design-Test Odaklı Tasarım) da sahibiz.
 
-### HTTP status codes
+### HTTP durum kodları
 
 <p>
   <img src="../images/http-status-code.jpg" style="width: 540px" />
 </p>
 
 
-The response codes for HTTP are divided into five categories: 
+HTTP için yanıt kodları beş kategoriye ayrılmıştır:
 
-Informational (100-199) 
-Success (200-299) 
-Redirection (300-399) 
-Client Error (400-499) 
-Server Error (500-599) 
+Bilgilendirici (100-199)
+Başarı (200-299)
+Yönlendirme (300-399)
+İstemci Hatası (400-499)
+Sunucu Hatası (500-599)
 
 ### What does API gateway do? 
 
