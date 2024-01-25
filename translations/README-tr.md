@@ -35,7 +35,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [HTTP durum kodları](#http-durum-kodları)
   - [API ağ geçidi ne işe yarar?](#api-ağ-geçidi-ne-işe-yarar)
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#etkili-ve-güvenli-apileri-nasıl-tasarlarız)
-  - [TCP/IP kapsülleme](#tcpip-encapsulation)
+  - [TCP/IP kapsülleme](#tcpip-kapsülleme)
   - [Nginx'e neden "ters" proxy deniyor?](#why-is-nginx-called-a-reverse-proxy)
   - [Yaygın yük dengeleme algoritmaları nelerdir?](#what-are-the-common-load-balancing-algorithms)
   - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---do-you-know-the-differences)
@@ -378,29 +378,29 @@ Aşağıdaki şemada bir alışveriş sepeti örneğiyle tipik API tasarımları
 
 API tasarımının yalnızca URL yolu tasarımı olmadığını unutmayın. Çoğu zaman doğru kaynak adlarını, tanımlayıcıları ve yol modellerini seçmemiz gerekir. API ağ geçidinde uygun HTTP başlık alanlarının tasarlanması veya etkili hız sınırlayıcı kuralların tasarlanması da aynı derecede önemlidir.
 
-### TCP/IP encapsulation 
+### TCP/IP kapsülleme
 
-How is data sent over the network? Why do we need so many layers in the OSI model?
+Veriler ağ üzerinden nasıl gönderilir? OSI modelinde neden bu kadar çok katmana ihtiyacımız var?
 
-The diagram below shows how data is encapsulated and de-encapsulated when transmitting over the network.
+Aşağıdaki şema, ağ üzerinden iletirken verilerin nasıl kapsüllendiğini ve kapsülden çıkarıldığını gösterir.
 
 <p>
   <img src="../images/osi model.jpeg" />
 </p>
 
-Step 1: When Device A sends data to Device B over the network via the HTTP protocol, it is first added an HTTP header at the application layer.
+Adım 1: Cihaz A, HTTP protokolü üzerinden ağ üzerinden Cihaz B'ye veri gönderdiğinde, öncelikle uygulama katmanına bir HTTP başlığı eklenir.
 
-Step 2: Then a TCP or a UDP header is added to the data. It is encapsulated into TCP segments at the transport layer. The header contains the source port, destination port, and sequence number.
+Adım 2: Daha sonra verilere bir TCP veya UDP başlığı eklenir. Taşıma katmanında TCP segmentleri halinde kapsüllenir. Başlık kaynak bağlantı noktasını, hedef bağlantı noktasını ve sıra numarasını içerir.
 
-Step 3: The segments are then encapsulated with an IP header at the network layer. The IP header contains the source/destination IP addresses.
+Adım 3: Segmentler daha sonra ağ katmanında bir IP başlığı ile kapsüllenir. IP başlığı kaynak/hedef IP adreslerini içerir.
 
-Step 4: The IP datagram is added a MAC header at the data link layer, with source/destination MAC addresses.
+Adım 4: IP datagramına, veri bağlantısı katmanına kaynak/hedef MAC adresleriyle birlikte bir MAC başlığı eklenir.
 
-Step 5: The encapsulated frames are sent to the physical layer and sent over the network in binary bits.
+Adım 5: Kapsüllenen alanlar fiziksel katmana gönderilir ve ağ üzerinden ikili bitler halinde gönderilir.
 
-Steps 6-10: When Device B receives the bits from the network, it performs the de-encapsulation process, which is a reverse processing of the encapsulation process. The headers are removed layer by layer, and eventually, Device B can read the data.
+Adım 6-10: Cihaz B, bitleri ağdan aldığında, kapsülleme işleminin tersine işlenmesi olan kapsülden çıkarma işlemini gerçekleştirir. Başlıklar katman katman kaldırılır ve sonunda Cihaz B verileri okuyabilir.
 
-We need layers in the network model because each layer focuses on its own responsibilities. Each layer can rely on the headers for processing instructions and does not need to know the meaning of the data from the last layer.
+Ağ modelinde katmanlara ihtiyacımız var çünkü her katman kendi sorumluluklarına odaklanıyor. Her katman, talimatları işlemek için başlıklara güvenebilir ve son katmandaki verilerin anlamını bilmesine gerek yoktur.
 
 ### Why is Nginx called a “reverse” proxy?
 
