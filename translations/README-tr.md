@@ -33,7 +33,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [SOAP vs REST vs GraphQL vs RPC](#soap-vs-rest-vs-graphql-vs-rpc)
   - [Önce Kod vs. Önce API](#önce-kod-vs-önce-api)
   - [HTTP durum kodları](#http-durum-kodları)
-  - [API ağ geçidi ne işe yarar?](#what-does-api-gateway-do)
+  - [API ağ geçidi ne işe yarar?](#api-ağ-geçidi-ne-işe-yarar)
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#how-do-we-design-effective-and-safe-apis)
   - [TCP/IP kapsülleme](#tcpip-encapsulation)
   - [Nginx'e neden "ters" proxy deniyor?](#why-is-nginx-called-a-reverse-proxy)
@@ -343,29 +343,29 @@ Yönlendirme (300-399)
 İstemci Hatası (400-499)
 Sunucu Hatası (500-599)
 
-### What does API gateway do? 
+### API ağ geçidi ne işe yarar?
 
-The diagram below shows the details. 
+Aşağıdaki diyagram ayrıntıları göstermektedir.
 
 <p>
   <img src="../images/api_gateway.jpg" style="width: 520px" />
 </p>
 
-Step 1 - The client sends an HTTP request to the API gateway. 
+Adım 1 - İstemci, API ağ geçidine bir HTTP isteği gönderir.
 
-Step 2 - The API gateway parses and validates the attributes in the HTTP request. 
+Adım 2 - API ağ geçidi, HTTP isteğindeki nitelikleri ayrıştırır ve doğrular.
 
-Step 3 - The API gateway performs allow-list/deny-list checks. 
+Adım 3 - API ağ geçidi, izin verilenler listesi/reddetilenler listesi kontrollerini gerçekleştirir.
 
-Step 4 - The API gateway talks to an identity provider for authentication and authorization. 
+Adım 4 - API ağ geçidi, kimlik doğrulama ve yetkilendirme için bir kimlik sağlayıcıyla konuşur.
 
-Step 5 - The rate limiting rules are applied to the request. If it is over the limit, the request is rejected. 
+Adım 5 - İsteğe hız sınırlama kuralları uygulanır. Limitin üzerinde olması durumunda talep reddedilir.
 
-Steps 6 and 7 - Now that the request has passed basic checks, the API gateway finds the relevant service to route to by path matching. 
+Adım 6 ve 7 - İstek temel kontrolleri geçtiğine göre, API ağ geçidi yol eşleştirme yoluyla yönlendirilecek ilgili hizmeti bulur.
 
-Step 8 - The API gateway transforms the request into the appropriate protocol and sends it to backend microservices. 
+Adım 8 - API ağ geçidi, isteği uygun protokole dönüştürür ve arka uç mikroservislere gönderir.
 
-Steps 9-12: The API gateway can handle errors properly, and deals with faults if the error takes a longer time to recover (circuit break). It can also leverage ELK (Elastic-Logstash-Kibana) stack for logging and monitoring. We sometimes cache data in the API gateway. 
+Adım 9-12: API ağ geçidi, hataları doğru şekilde işleyebilir ve hatanın düzeltilmesi daha uzun sürerse (devre kesintisi) hatalarla ilgilenir. Ayrıca sistem günlüğüne kaydetme ve izleme için ELK (Elastic-Logstash-Kibana) yığınından da yararlanabilir. Bazen verileri API ağ geçidinde önbelleğe alırız.
 
 ### How do we design effective and safe APIs?
 
