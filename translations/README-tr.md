@@ -37,7 +37,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#etkili-ve-güvenli-apileri-nasıl-tasarlarız)
   - [TCP/IP kapsülleme](#tcpip-kapsülleme)
   - [Nginx'e neden "ters" proxy deniyor?](#nginxe-neden-ters-proxy-deniyor)
-  - [Yaygın yük dengeleme algoritmaları nelerdir?](#what-are-the-common-load-balancing-algorithms)
+  - [Yaygın yük dengeleme algoritmaları nelerdir?](#yaygın-yük-dengeleme-algoritmaları-nelerdir)
   - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---do-you-know-the-differences)
 - [CI/CD](#cicd)
   - [CI/CD Pipeline Basit Terimlerle Açıklandı](#cicd-pipeline-explained-in-simple-terms)
@@ -427,41 +427,41 @@ Ters proxy aşağıdakiler için iyidir:
 3. Statik içeriklerin önbelleğe alınması
 4. SSL iletişimlerini şifrelemek ve şifresini çözmek
 
-### What are the common load-balancing algorithms?
+### Yaygın yük dengeleme algoritmaları nelerdir?
 
-The diagram below shows 6 common algorithms. 
+Aşağıdaki şemada 6 ortak algoritma gösterilmektedir.
 
 <p>
   <img src="../images/lb-algorithms.jpg" />
 </p>
 
-- Static Algorithms 
+- Statik Algoritmalar
 
 1. Round robin
 
-    The client requests are sent to different service instances in sequential order. The services are usually required to be stateless. 
+    İstemci istekleri farklı hizmet örneklerine sıralı olarak gönderilir. Hizmetlerin genellikle vatansız olması gerekir.
 
-3. Sticky round-robin
+2. Yapışkan round-robin
 
-    This is an improvement of the round-robin algorithm. If Alice’s first request goes to service A, the following requests go to service A as well. 
+    Bu, round-robin algoritmasının geliştirilmiş halidir. Alice'in ilk isteği A servisine giderse sonraki istekler de A servisine gider.
 
-4. Weighted round-robin
+3. Ağırlıklı round-robin
 
-    The admin can specify the weight for each service. The ones with a higher weight handle more requests than others. 
+    Yönetici her hizmetin ağırlığını belirleyebilir. Daha yüksek ağırlığa sahip olanlar diğerlerinden daha fazla isteği karşılar.
 
-6. Hash
+4. Hash
 
-    This algorithm applies a hash function on the incoming requests’ IP or URL. The requests are routed to relevant instances based on the hash function result. 
+    This algorithm applies a hash function on the incoming requests’ IP or URL. The requests are routed to relevant instances based on the hash function result.
 
-- Dynamic Algorithms
+- Dinamik Algoritmalar
 
-5. Least connections
+5. En az bağlantı
 
-    A new request is sent to the service instance with the least concurrent connections. 
+    En az eşzamanlı bağlantıya sahip hizmet örneğine yeni bir istek gönderilir.
 
-7. Least response time
+6. En az yanıt süresi
 
-    A new request is sent to the service instance with the fastest response time.
+     Hizmet örneğine en hızlı yanıt süresine sahip yeni bir istek gönderilir.
 
 ### URL, URI, URN - Do you know the differences? 
 
