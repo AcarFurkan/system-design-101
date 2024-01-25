@@ -36,7 +36,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [API ağ geçidi ne işe yarar?](#api-ağ-geçidi-ne-işe-yarar)
   - [Etkili ve güvenli API'leri nasıl tasarlarız?](#etkili-ve-güvenli-apileri-nasıl-tasarlarız)
   - [TCP/IP kapsülleme](#tcpip-kapsülleme)
-  - [Nginx'e neden "ters" proxy deniyor?](#why-is-nginx-called-a-reverse-proxy)
+  - [Nginx'e neden "ters" proxy deniyor?](#nginxe-neden-ters-proxy-deniyor)
   - [Yaygın yük dengeleme algoritmaları nelerdir?](#what-are-the-common-load-balancing-algorithms)
   - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---do-you-know-the-differences)
 - [CI/CD](#cicd)
@@ -402,30 +402,30 @@ Adım 6-10: Cihaz B, bitleri ağdan aldığında, kapsülleme işleminin tersine
 
 Ağ modelinde katmanlara ihtiyacımız var çünkü her katman kendi sorumluluklarına odaklanıyor. Her katman, talimatları işlemek için başlıklara güvenebilir ve son katmandaki verilerin anlamını bilmesine gerek yoktur.
 
-### Why is Nginx called a “reverse” proxy?
+### Nginx'e neden "ters" proxy deniyor?
 
-The diagram below shows the differences between a 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐩𝐫𝐨𝐱𝐲 and a 𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐩𝐫𝐨𝐱𝐲.
+Aşağıdaki diyagram 𝐟𝐨𝐫𝐰𝐚𝐫𝐝 𝐩𝐫𝐨𝐱𝐲 ve 𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐩𝐫𝐨𝐱𝐲 arasındaki farkları göstermektedir.
 
 <p>
   <img src="../images/Forward Proxy v.s. Reverse Proxy2x.jpg" style="width: 720px" />
 </p>
 
-A forward proxy is a server that sits between user devices and the internet.
+İleri proxy, kullanıcı cihazları ile internet arasında bulunan bir sunucudur.
 
-A forward proxy is commonly used for: 
+İleri proxy yaygın olarak aşağıdakiler için kullanılır:
 
-1. Protecting clients
-2. Circumventing browsing restrictions
-3. Blocking access to certain content
+1. Müşterileri koruma
+2. Tarama kısıtlamalarını aşmak
+3. Belirli içeriğe erişimin engellenmesi
 
-A reverse proxy is a server that accepts a request from the client, forwards the request to web servers, and returns the results to the client as if the proxy server had processed the request.
+Ters proxy, istemciden gelen bir isteği kabul eden, isteği web sunucularına ileten ve sanki proxy sunucusu isteği işlemiş gibi sonuçları istemciye döndüren bir sunucudur.
 
-A reverse proxy is good for:
+Ters proxy aşağıdakiler için iyidir:
 
-1. Protecting servers
-2. Load balancing
-3. Caching static contents
-4. Encrypting and decrypting SSL communications
+1. Sunucuları korumak
+2. Yük dengeleme
+3. Statik içeriklerin önbelleğe alınması
+4. SSL iletişimlerini şifrelemek ve şifresini çözmek
 
 ### What are the common load-balancing algorithms?
 
