@@ -34,7 +34,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [Önce Kod vs. Önce API](#önce-kod-vs-önce-api)
   - [HTTP durum kodları](#http-durum-kodları)
   - [API ağ geçidi ne işe yarar?](#api-ağ-geçidi-ne-işe-yarar)
-  - [Etkili ve güvenli API'leri nasıl tasarlarız?](#how-do-we-design-effective-and-safe-apis)
+  - [Etkili ve güvenli API'leri nasıl tasarlarız?](#etkili-ve-güvenli-apileri-nasıl-tasarlarız)
   - [TCP/IP kapsülleme](#tcpip-encapsulation)
   - [Nginx'e neden "ters" proxy deniyor?](#why-is-nginx-called-a-reverse-proxy)
   - [Yaygın yük dengeleme algoritmaları nelerdir?](#what-are-the-common-load-balancing-algorithms)
@@ -367,16 +367,16 @@ Adım 8 - API ağ geçidi, isteği uygun protokole dönüştürür ve arka uç m
 
 Adım 9-12: API ağ geçidi, hataları doğru şekilde işleyebilir ve hatanın düzeltilmesi daha uzun sürerse (devre kesintisi) hatalarla ilgilenir. Ayrıca sistem günlüğüne kaydetme ve izleme için ELK (Elastic-Logstash-Kibana) yığınından da yararlanabilir. Bazen verileri API ağ geçidinde önbelleğe alırız.
 
-### How do we design effective and safe APIs?
+### Etkili ve güvenli API'leri nasıl tasarlarız?
 
-The diagram below shows typical API designs with a shopping cart example. 
+Aşağıdaki şemada bir alışveriş sepeti örneğiyle tipik API tasarımları gösterilmektedir.
 
 <p>
   <img src="../images/safe-apis.jpg" />
 </p>
 
 
-Note that API design is not just URL path design. Most of the time, we need to choose the proper resource names, identifiers, and path patterns. It is equally important to design proper HTTP header fields or to design effective rate-limiting rules within the API gateway. 
+API tasarımının yalnızca URL yolu tasarımı olmadığını unutmayın. Çoğu zaman doğru kaynak adlarını, tanımlayıcıları ve yol modellerini seçmemiz gerekir. API ağ geçidinde uygun HTTP başlık alanlarının tasarlanması veya etkili hız sınırlayıcı kuralların tasarlanması da aynı derecede önemlidir.
 
 ### TCP/IP encapsulation 
 
