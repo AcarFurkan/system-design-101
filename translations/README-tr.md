@@ -38,7 +38,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [TCP/IP kapsülleme](#tcpip-kapsülleme)
   - [Nginx'e neden "ters" proxy deniyor?](#nginxe-neden-ters-proxy-deniyor)
   - [Yaygın yük dengeleme algoritmaları nelerdir?](#yaygın-yük-dengeleme-algoritmaları-nelerdir)
-  - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---do-you-know-the-differences)
+  - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---farklarını-biliyor-musunuz)
 - [CI/CD](#cicd)
   - [CI/CD Pipeline Basit Terimlerle Açıklandı](#cicd-pipeline-explained-in-simple-terms)
   - [Netflix Teknoloji Yığını (CI/CD Pipeline)](#netflix-tech-stack-cicd-pipeline)
@@ -463,9 +463,9 @@ Aşağıdaki şemada 6 ortak algoritma gösterilmektedir.
 
      Hizmet örneğine en hızlı yanıt süresine sahip yeni bir istek gönderilir.
 
-### URL, URI, URN - Do you know the differences? 
+### URL, URI, URN - Farklarını biliyor musunuz?
 
-The diagram below shows a comparison of URL, URI, and URN. 
+Aşağıdaki şemada URL, URI ve URN karşılaştırması gösterilmektedir.
 
 <p>
   <img src="../images/url-uri-urn.jpg" />
@@ -473,24 +473,23 @@ The diagram below shows a comparison of URL, URI, and URN.
 
 - URI 
 
-URI stands for Uniform Resource Identifier. It identifies a logical or physical resource on the web. URL and URN are subtypes of URI. URL locates a resource, while URN names a resource. 
+URI, Tekdüzen Kaynak Tanımlayıcı anlamına gelir. Web üzerindeki mantıksal veya fiziksel bir kaynağı tanımlar. URL ve URN, URI'nin alt türleridir. URL bir kaynağın yerini belirlerken, URN bir kaynağı adlandırır.
 
-A URI is composed of the following parts: 
-scheme:[//authority]path[?query][#fragment] 
+Bir URI aşağıdaki parçalardan oluşur: şema:[//yetki]yol[?sorgu][#parça]
 
 - URL 
 
-URL stands for Uniform Resource Locator, the key concept of HTTP. It is the address of a unique resource on the web. It can be used with other protocols like FTP and JDBC. 
+URL, HTTP'nin temel kavramı olan Tekdüzen Kaynak Bulucu anlamına gelir. Web üzerindeki benzersiz bir kaynağın adresidir. FTP ve JDBC gibi diğer protokollerle birlikte kullanılabilir.
 
 - URN 
 
-URN stands for Uniform Resource Name. It uses the urn scheme. URNs cannot be used to locate a resource. A simple example given in the diagram is composed of a namespace and a namespace-specific string. 
+URN, Tekdüzen Kaynak Adı anlamına gelir. Urn şemasını kullanır. URN'ler bir kaynağı bulmak için kullanılamaz. Diyagramda verilen basit bir örnek, bir ad alanı ve ad alanına özgü bir dizeden oluşur.
 
-If you would like to learn more detail on the subject, I would recommend [W3C’s clarification](https://www.w3.org/TR/uri-clarification/).
+Konuyla ilgili daha detaylı bilgi edinmek isterseniz tavsiye ederim [W3C’s clarification](https://www.w3.org/TR/uri-clarification/).
 
 ## CI/CD
 
-### CI/CD Pipeline Explained in Simple Terms
+### CI/CD Ardışık Düzeni Basit Bir Şekilde Açıklandı
 
 <p>
   <img src="../images/ci-cd-pipeline.jpg" style="width: 680px" />
