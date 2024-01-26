@@ -495,28 +495,28 @@ Konuyla ilgili daha detaylı bilgi edinmek isterseniz tavsiye ederim [W3C’s cl
   <img src="../images/ci-cd-pipeline.jpg" style="width: 680px" />
 </p>
 
-Section 1 - SDLC with CI/CD
+Bölüm 1 - CI/CD'li SDLC
 
-The software development life cycle (SDLC) consists of several key stages: development, testing, deployment, and maintenance. CI/CD automates and integrates these stages to enable faster and more reliable releases.
+Yazılım geliştirme yaşam döngüsü (SDLC) birkaç önemli aşamadan oluşur: geliştirme, test etme, dağıtım ve bakım. CI/CD, daha hızlı ve daha güvenilir sürümler sağlamak için bu aşamaları otomatikleştirir ve entegre eder.
 
-When code is pushed to a git repository, it triggers an automated build and test process. End-to-end (e2e) test cases are run to validate the code. If tests pass, the code can be automatically deployed to staging/production. If issues are found, the code is sent back to development for bug fixing. This automation provides fast feedback to developers and reduces the risk of bugs in production.
+Kod bir git deposuna gönderildiğinde otomatikleştirilmiş bir derleme ve test sürecini tetikler. Kodu doğrulamak için uçtan uca (e2e) test senaryoları çalıştırılır. Testler başarılı olursa kod otomatik olarak hazırlama/üretim aşamasına dağıtılabilir. Sorun bulunursa kod, hatanın düzeltilmesi için geliştirme aşamasına geri gönderilir. Bu otomasyon, geliştiricilere hızlı geri bildirim sağlar ve üretimdeki hata riskini azaltır.
 
-Section 2 - Difference between CI and CD
+Bölüm 2 - CI ve CD arasındaki fark
 
-Continuous Integration (CI) automates the build, test, and merge process. It runs tests whenever code is committed to detect integration issues early. This encourages frequent code commits and rapid feedback.
+Sürekli Entegrasyon (CI), oluşturma, test etme ve birleştirme sürecini otomatikleştirir. Entegrasyon sorunlarını erken tespit etmek için kod işlendiğinde testler çalıştırır. Bu, sık kod taahhütlerini ve hızlı geri bildirimi teşvik eder.
 
-Continuous Delivery (CD) automates release processes like infrastructure changes and deployment. It ensures software can be released reliably at any time through automated workflows. CD may also automate the manual testing and approval steps required before production deployment.
+Sürekli Teslimat (CD), altyapı değişiklikleri ve dağıtım gibi sürüm süreçlerini otomatikleştirir. Yazılımın otomatik iş akışları aracılığıyla herhangi bir zamanda güvenilir bir şekilde yayınlanabilmesini sağlar. CD ayrıca üretim dağıtımından önce gereken manuel test ve onay adımlarını da otomatikleştirebilir.
 
-Section 3 - CI/CD Pipeline
+Bölüm 3 - CI/CD Boru Hattı
 
-A typical CI/CD pipeline has several connected stages:
-- The developer commits code changes to the source control
-- CI server detects changes and triggers the build
-- Code is compiled, and tested (unit, integration tests)
-- Test results reported to the developer
-- On success, artifacts are deployed to staging environments
-- Further testing may be done on staging before release
-- CD system deploys approved changes to production
+Tipik bir CI/CD işlem hattının birkaç bağlantılı aşaması vardır:
+- Geliştirici kod değişikliklerini kaynak kontrolüne aktarır
+- CI sunucusu değişiklikleri algılar ve derlemeyi tetikler
+- Kod derlendi ve test edildi (birim, entegrasyon testleri)
+- Geliştiriciye bildirilen test sonuçları
+- Başarı durumunda eserler hazırlama ortamlarına dağıtılır
+- Yayınlanmadan önce aşamalandırma konusunda daha fazla test yapılabilir
+- CD sistemi onaylanmış değişiklikleri üretime dağıtır
 
 ### Netflix Tech Stack (CI/CD Pipeline)
 
