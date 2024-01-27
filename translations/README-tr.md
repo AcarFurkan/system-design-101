@@ -41,7 +41,7 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [URL, URI, URN - Farklarını biliyor musunuz?](#url-uri-urn---farklarını-biliyor-musunuz)
 - [CI/CD](#cicd)
   - [CI/CD Pipeline Basit Terimlerle Açıklandı](#cicd-pipeline-explained-in-simple-terms)
-  - [Netflix Teknoloji Yığını (CI/CD Pipeline)](#netflix-tech-stack-cicd-pipeline)
+  - [Netflix Teknoloji Yığını (CI/CD Pipeline)](#netflix-teknoloji-yığını-cicd-pipeline)
 - [Mimari desenler](#architecture-patterns)
   - [MVC, MVP, MVVM, MVVM-C, ve VIPER](#mvc-mvp-mvvm-mvvm-c-and-viper)
   - [Her Geliştiricinin Bilmesi Gereken 18 Temel Tasarım Modeli](#18-key-design-patterns-every-developer-should-know)
@@ -518,27 +518,27 @@ Tipik bir CI/CD işlem hattının birkaç bağlantılı aşaması vardır:
 - Yayınlanmadan önce aşamalandırma konusunda daha fazla test yapılabilir
 - CD sistemi onaylanmış değişiklikleri üretime dağıtır
 
-### Netflix Tech Stack (CI/CD Pipeline)
+### Netflix Teknoloji Yığını (CI/CD Pipeline)
 
 <p>
   <img src="../images/netflix-ci-cd.jpg" style="width: 720px" />
 </p>
 
-Planning: Netflix Engineering uses JIRA for planning and Confluence for documentation. 
+Planlama: Netflix Mühendisliği, planlama için JIRA'yı ve belgeleme için Confluence'ı kullanır.
 
-Coding: Java is the primary programming language for the backend service, while other languages are used for different use cases.  
+Kodlama: Java, arka uç hizmeti için birincil programlama dilidir, diğer diller ise farklı kullanım durumları için kullanılır.
 
-Build: Gradle is mainly used for building, and Gradle plugins are built to support various use cases.  
+Build: Gradle esas olarak inşaat için kullanılır ve Gradle eklentileri çeşitli kullanım durumlarını desteklemek için oluşturulmuştur.
 
-Packaging: Package and dependencies are packed into an Amazon Machine Image (AMI) for release. 
+Paketleme: Paket ve bağımlılıklar yayınlanmak üzere bir Amazon Machine Image'a (AMI) paketlenir.
 
-Testing: Testing emphasizes the production culture's focus on building chaos tools.  
+Test etme: Test etme, üretim kültürünün kaos araçları oluşturmaya odaklandığını vurgular.
 
-Deployment: Netflix uses its self-built Spinnaker for canary rollout deployment.  
+Dağıtım: Netflix, kanarya dağıtımı için kendi geliştirdiği Spinnaker'ı kullanıyor.
 
-Monitoring: The monitoring metrics are centralized in Atlas, and Kayenta is used to detect anomalies.  
+İzleme: İzleme ölçümleri Atlas'ta merkezileştirilir ve anormallikleri tespit etmek için Kayenta kullanılır.
 
-Incident report: Incidents are dispatched according to priority, and PagerDuty is used for incident handling. 
+Olay raporu: Olaylar önceliğe göre gönderilir ve olayların ele alınması için PagerDuty kullanılır.
 
 ## Architecture patterns
 
