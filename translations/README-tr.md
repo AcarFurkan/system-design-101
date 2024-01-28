@@ -42,10 +42,10 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
 - [CI/CD](#cicd)
   - [CI/CD Pipeline Basit Terimlerle Açıklandı](#cicd-pipeline-explained-in-simple-terms)
   - [Netflix Teknoloji Yığını (CI/CD Pipeline)](#netflix-teknoloji-yığını-cicd-pipeline)
-- [Mimari desenler](#architecture-patterns)
-  - [MVC, MVP, MVVM, MVVM-C, ve VIPER](#mvc-mvp-mvvm-mvvm-c-and-viper)
-  - [Her Geliştiricinin Bilmesi Gereken 18 Temel Tasarım Modeli](#18-key-design-patterns-every-developer-should-know)
-- [Veri tabanı](#database)
+- [Mimari desenler](#mimari-desenler)
+  - [MVC, MVP, MVVM, MVVM-C, ve VIPER](#mvc-mvp-mvvm-mvvm-c-ve-viper)
+  - [Her Geliştiricinin Bilmesi Gereken 18 Temel Tasarım Modeli](#her-geliştiricinin-bilmesi-gereken-18-temel-tasarım-modeli)
+- [Veri tabanı](#veri-tabanı)
   - [Bulut hizmetlerindeki farklı veritabanlarından oluşan güzel bir kopya sayfası](#a-nice-cheat-sheet-of-different-databases-in-cloud-services)
   - [Veritabanlarınıza Güç Veren 8 Veri Yapısı](#8-data-structures-that-power-your-databases)
   - [SQL ifadesi veritabanında nasıl yürütülür?](#how-is-an-sql-statement-executed-in-the-database)
@@ -540,46 +540,47 @@ Dağıtım: Netflix, kanarya dağıtımı için kendi geliştirdiği Spinnaker'�
 
 Olay raporu: Olaylar önceliğe göre gönderilir ve olayların ele alınması için PagerDuty kullanılır.
 
-## Architecture patterns
+## Mimari desenler
 
-### MVC, MVP, MVVM, MVVM-C, and VIPER
-These architecture patterns are among the most commonly used in app development, whether on iOS or Android platforms. Developers have introduced them to overcome the limitations of earlier patterns. So, how do they differ? 
+### MVC, MVP, MVVM, MVVM-C, ve VIPER
+Bu mimari kalıpları, ister iOS ister Android platformlarında olsun, uygulama geliştirmede en sık kullanılanlar arasındadır. Geliştiriciler, daha önceki kalıpların sınırlamalarının üstesinden gelmek için bunları kullanırlar. Peki bunlar nasıl farklılık gösteriyor?
 
 <p>
   <img src="../images/client arch patterns.png" style="width: 720px" />
 </p>
 
-- MVC, the oldest pattern, dates back almost 50 years 
-- Every pattern has a "view" (V) responsible for displaying content and receiving user input 
-- Most patterns include a "model" (M) to manage business data 
-- "Controller," "presenter," and "view-model" are translators that mediate between the view and the model ("entity" in the VIPER pattern)
+- En eski kalıp olan MVC'nin geçmişi neredeyse 50 yıl öncesine dayanıyor
+- Her modelde içeriğin görüntülenmesinden ve kullanıcı girişinin alınmasından sorumlu bir "görünüm(view)" (V) bulunur
+- Çoğu model, iş verilerini yönetmek için bir "model" (M) içerir
+- "Denetleyici(controller)", "sunucu(presenter)" ve "görüntü-model(view-model)", görünüm ile model arasında aracılık eden çevirmenlerdir (VIPER modelinde "varlık(entity)")
 
-### 18 Key Design Patterns Every Developer Should Know
+### Her Geliştiricinin Bilmesi Gereken 18 Temel Tasarım Modeli
 
-Patterns are reusable solutions to common design problems, resulting in a smoother, more efficient development process. They serve as blueprints for building better software structures. These are some of the most popular patterns: 
+Desenler, yaygın tasarım sorunlarına yeniden kullanılabilen çözümlerdir ve daha sorunsuz, daha verimli bir geliştirme süreci sağlar. Daha iyi yazılım yapıları oluşturmak için plan görevi görürler. Bunlar en popüler kalıplardan bazıları:
 
 <p>
   <img src="../images/18-oo-patterns.png" />
 </p>
 
-- Abstract Factory: Family Creator - Makes groups of related items. 
-- Builder: Lego Master - Builds objects step by step, keeping creation and appearance separate. 
-- Prototype: Clone Maker - Creates copies of fully prepared examples. 
-- Singleton: One and Only - A special class with just one instance. 
-- Adapter: Universal Plug - Connects things with different interfaces. 
-- Bridge: Function Connector - Links how an object works to what it does. 
-- Composite: Tree Builder - Forms tree-like structures of simple and complex parts. 
-- Decorator: Customizer - Adds features to objects without changing their core. 
-- Facade: One-Stop-Shop - Represents a whole system with a single, simplified interface. 
-- Flyweight: Space Saver - Shares small, reusable items efficiently. 
-- Proxy: Stand-In Actor - Represents another object, controlling access or actions. 
-- Chain of Responsibility: Request Relay - Passes a request through a chain of objects until handled. 
-- Command: Task Wrapper - Turns a request into an object, ready for action. 
-- Iterator: Collection Explorer - Accesses elements in a collection one by one. 
-- Mediator: Communication Hub - Simplifies interactions between different classes. 
-- Memento: Time Capsule - Captures and restores an object's state. 
-- Observer: News Broadcaster - Notifies classes about changes in other objects. 
-- Visitor: Skillful Guest - Adds new operations to a class without altering it.
+
+- Soyut Fabrika: Aile Yaratıcısı - İlgili öğelerin gruplarını yapar.
+- İnşaatçı: Lego Ustası - Nesneleri adım adım inşa eder, yaratımı ve görünümü ayrı tutar.
+- Prototip: Klon Yapıcı - Tamamen hazırlanmış örneklerin kopyalarını oluşturur.
+- Singleton: Tek ve Yalnız - Yalnızca bir örneği olan özel bir sınıf.
+- Adaptör: Evrensel Fiş - Farklı arayüzleri olan şeyleri bağlar.
+- Köprü: Fonksiyon Bağlayıcı - Bir nesnenin nasıl çalıştığını ne yaptığına bağlar.
+- Kompozit: Ağaç Oluşturucu - Basit ve karmaşık parçalardan ağaç benzeri yapılar oluşturur.
+- Dekoratör: Kişiselleştirici - Nesnelere çekirdeklerini değiştirmeden özellikler ekler.
+- Cephe: Tek-Durak-Mağaza - Bir sistem bütününü tek, basitleştirilmiş bir arayüzle temsil eder.
+- Hafiflik: Alan Tasarrufu - Küçük, yeniden kullanılabilir öğeleri verimli bir şekilde paylaşır.
+- Vekil: Yerine Geçen Aktör - Başka bir nesneyi temsil eder, erişimi veya eylemleri kontrol eder.
+- Sorumluluk Zinciri: İstek Rölesi - Bir isteği işlenene kadar nesneler zinciri boyunca geçirir.
+-Komut: Görev Sarıcı - Bir isteği, eyleme hazır bir nesneye dönüştürür.
+-Yineleyici: Koleksiyon Gezgini - Bir koleksiyondaki öğelere teker teker erişir.
+- Arabulucu: İletişim Merkezi - Farklı sınıflar arasındaki etkileşimleri basitleştirir.
+- Anı: Zaman Kapsülü - Bir nesnenin durumunu yakalar ve geri yükler.
+- Gözlemci: Haber Yayıncısı - Diğer nesnelerdeki değişiklikler hakkında sınıfları - bilgilendirir.
+- Ziyaretçi: Yetenekli Misafir - Bir sınıfa yeni işlemler ekler, ancak onu değiştirmez.
 
 ## Database
 
