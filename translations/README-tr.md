@@ -46,8 +46,8 @@ Karmaşık sistemleri görseller ve basit terimler kullanarak açıkladık.
   - [MVC, MVP, MVVM, MVVM-C, ve VIPER](#mvc-mvp-mvvm-mvvm-c-ve-viper)
   - [Her Geliştiricinin Bilmesi Gereken 18 Temel Tasarım Modeli](#her-geliştiricinin-bilmesi-gereken-18-temel-tasarım-modeli)
 - [Veri tabanı](#veri-tabanı)
-  - [Bulut hizmetlerindeki farklı veritabanlarından oluşan güzel bir kopya sayfası](#a-nice-cheat-sheet-of-different-databases-in-cloud-services)
-  - [Veritabanlarınıza Güç Veren 8 Veri Yapısı](#8-data-structures-that-power-your-databases)
+  - [Bulut hizmetlerindeki farklı veritabanlarından oluşan güzel bir kopya sayfası](#bulut-hizmetlerindeki-farkları-veritablarından-oluşan-güzel-bir-kopya-sayfası)
+  - [Veritabanlarınıza Güç Veren 8 Veri Yapısı](#veritabanlarınıza-güç-veren-8-veri-yapısı)
   - [SQL ifadesi veritabanında nasıl yürütülür?](#how-is-an-sql-statement-executed-in-the-database)
   - [CAP teoremi](#cap-theorem)
   - [Bellek ve Depolama Türleri](#types-of-memory-and-storage)
@@ -582,38 +582,38 @@ Desenler, yaygın tasarım sorunlarına yeniden kullanılabilen çözümlerdir v
 - Gözlemci: Haber Yayıncısı - Diğer nesnelerdeki değişiklikler hakkında sınıfları - bilgilendirir.
 - Ziyaretçi: Yetenekli Misafir - Bir sınıfa yeni işlemler ekler, ancak onu değiştirmez.
 
-## Database
+## Veri tabanı
 
-### A nice cheat sheet of different databases in cloud services
+### Bulut hizmetlerindeki farklı veritabanlarından oluşan güzel bir kopya sayfası
 
 <p>
   <img src="../images/cloud-dbs2.png" />
 </p>
 
-Choosing the right database for your project is a complex task. Many database options, each suited to distinct use cases, can quickly lead to decision fatigue. 
+Projeniz için doğru veritabanını seçmek karmaşık bir iştir. Her biri farklı kullanım senaryolarına uygun olan birçok veritabanı seçeneği vardır, hızlı bir şekilde karar yorgunluğuna yol açabilir.
 
-We hope this cheat sheet provides high-level direction to pinpoint the right service that aligns with your project's needs and avoid potential pitfalls. 
+Bu kısa notun, projenizin ihtiyaçlarına uygun doğru hizmeti belirlemek ve olası tuzaklardan kaçınmak için üst düzey yönlendirme sağlayacağını umuyoruz.
 
-Note: Google has limited documentation for their database use cases. Even though we did our best to look at what was available and arrived at the best option, some of the entries may need to be more accurate. 
+Not: Google'ın veritabanı kullanım senaryolarına ilişkin belgeleri sınırlıdır. Neyin mevcut olduğuna bakmak ve en iyi seçeneğe ulaşmak için elimizden geleni yapmış olsak da, bazı girişlerin daha doğru olması gerekebilir.
 
-### 8 Data Structures That Power Your Databases
+### Veritabanlarınıza Güç Veren 8 Veri Yapısı
 
-The answer will vary depending on your use case. Data can be indexed in memory or on disk. Similarly, data formats vary, such as numbers, strings, geographic coordinates, etc. The system might be write-heavy or read-heavy. All of these factors affect your choice of database index format. 
+Cevap, kullanım durumunuza bağlı olarak değişecektir. Veriler bellekte veya diskte indekslenebilir. Benzer şekilde, sayılar, dizeler, coğrafi koordinatlar vb. gibi veri formatları da farklılık gösterir. Sistem, yazma ağırlıklı veya okuma ağırlıklı olabilir. Bu faktörlerin tümü veritabanı dizin formatı seçiminizi etkiler.
 
 <p>
   <img src="../images/8-ds-db.jpg" />
 </p>
 
-The following are some of the most popular data structures used for indexing data: 
+Verileri indekslemek için kullanılan en popüler veri yapılarından bazıları şunlardır:
 
-- Skiplist: a common in-memory index type. Used in Redis 
-- Hash index: a very common implementation of the “Map” data structure (or “Collection”) 
-- SSTable: immutable on-disk “Map” implementation 
-- LSM tree: Skiplist + SSTable. High write throughput 
-- B-tree: disk-based solution. Consistent read/write performance 
-- Inverted index: used for document indexing. Used in Lucene 
-- Suffix tree: for string pattern search 
-- R-tree: multi-dimension search, such as finding the nearest neighbor 
+- Atlama listesi(Skiplist): ortak bir bellek içi dizin türü. Redis'te kullanılır
+- Karma dizini(Hash index): “Harita” veri yapısının (veya “Koleksiyon”) çok yaygın bir uygulaması
+- SSTable: disk üzerinde değiştirilemez “Harita” uygulaması
+- LSM ağacı: Atlama Listesi + SSTable. Yüksek yazma verimi
+- B-ağacı: disk tabanlı çözüm. Tutarlı okuma/yazma performansı
+- Ters çevrilmiş indeks: belge indeksleme için kullanılır. Lucene'de kullanılır
+- Son ek ağacı(Suffix tree): dize deseni araması için
+- R-ağacı: en yakın komşuyu bulmak gibi çok boyutlu arama
 
 ### How is an SQL statement executed in the database?
 
